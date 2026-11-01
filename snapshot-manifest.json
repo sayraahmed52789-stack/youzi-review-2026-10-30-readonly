@@ -1,0 +1,53 @@
+{
+  "snapshot_date": "2026-10-30",
+  "source_filename": "游资心法工作台-2026-10-30.html",
+  "source_sha256": "5571b05daa2067c89efefd3c0efaa47e9afe73fb067368ab10e10d0e4664faf9",
+  "published_sha256": "8fd37f4c82b79d2b62e9bcd0bcbc7c83f73c574be00f8b20bef8c33bc00c4666",
+  "network_access": false,
+  "live_updates": false,
+  "panels": [
+    "复盘",
+    "情绪周期",
+    "盘前",
+    "竞价",
+    "盘中",
+    "大盘",
+    "战绩",
+    "优化"
+  ],
+  "navigation": "independent static HTML links",
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "8fd37f4c82b79d2b62e9bcd0bcbc7c83f73c574be00f8b20bef8c33bc00c4666"
+    },
+    {
+      "file": "sentiment.html",
+      "sha256": "108c85465f7480f9813d214abe4e304b6dfe8d900a3c22387d99d32030bb9a94"
+    },
+    {
+      "file": "premarket.html",
+      "sha256": "fca73108dabb093361520e5d26b589a8bf91b6eb64a6180b54764a60d3759fde"
+    },
+    {
+      "file": "auction.html",
+      "sha256": "0c8cf903bd75e79d8b88e368803f3d68b80efe3208ac5ca3ea164ba205842911"
+    },
+    {
+      "file": "intraday.html",
+      "sha256": "5702ba6b1472e87839846458e9109f05ab8ef04f5be86c63c7d1481f75122ef8"
+    },
+    {
+      "file": "market.html",
+      "sha256": "d1ef9edc493de290a7543ac4ab051487d5ce7dace594ac3e4e1bb433495d8723"
+    },
+    {
+      "file": "results.html",
+      "sha256": "f43b042eda3934f0d3343dc6acd2b21ef829277030ca4aa19b48043f31a3122b"
+    },
+    {
+      "file": "optimization.html",
+      "sha256": "2c9dcaa0da186ef5c01fa396c82b44baf6d7656b02f89fd4473d46f2969b6137"
+    }
+  ]
+}

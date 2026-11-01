@@ -1,0 +1,114 @@
+<!doctype html><html lang="zh-CN"><head><meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src data:; font-src data:; script-src &#39;none&#39;;sha256-IZtp9BzRRr30nh1cEJ28wuYfGCSrYkeVbHIpH4DaO3Y=&#39;; connect-src &#39;none&#39;; form-action &#39;none&#39;; base-uri &#39;none&#39;"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>游资心法工作台 · 2026-10-30</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin:0; background:#0e1117; color:#d7dde8; font:14px/1.55 "Microsoft YaHei","Segoe UI",sans-serif; }
+a { color:#6ea8fe; text-decoration:none; }
+header { position:sticky; top:0; z-index:9; background:#131822ee; backdrop-filter:blur(6px);
+         border-bottom:1px solid #222a36; padding:10px 18px; }
+h1 { font-size:16px; margin:0 0 8px; font-weight:600; letter-spacing:.5px; }
+h1 span { color:#7c8798; font-weight:400; font-size:12px; margin-left:8px; }
+nav { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+nav a { padding:5px 12px; border-radius:6px; color:#aab4c4; border:1px solid transparent; }
+nav a:hover { background:#1b2230; color:#e6ecf5; }
+nav a.on { background:#1f6feb22; border-color:#1f6feb77; color:#cfe0ff; }
+.meta { margin-left:auto; display:flex; gap:10px; align-items:center; font-size:12px; color:#7c8798; }
+select,input { background:#161c26; color:#d7dde8; border:1px solid #2a3342; border-radius:6px; padding:4px 8px; font:inherit; }
+main { padding:16px 18px 60px; max-width:1500px; margin:0 auto; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-bottom:14px; }
+.card { background:#151b25; border:1px solid #232c3a; border-radius:10px; padding:12px 14px; }
+.card-title { font-size:12px; color:#8a94a6; }
+.card-value { font-size:22px; font-weight:600; margin:6px 0 2px; }
+.card-sub { font-size:12px; color:#7c8798; }
+.up { color:#f6465d; } .down { color:#2ebd85; } .flat { color:#cfd6e3; }
+.panel { background:#121822; border:1px solid #232c3a; border-radius:10px; padding:14px 16px; margin-bottom:14px; }
+.panel h3 { font-size:13px; margin:0 0 10px; color:#9fb0c8; font-weight:600; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:1100px){ .grid2 { grid-template-columns:1fr; } }
+.table-wrap { overflow:auto; max-height:520px; border-radius:8px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { padding:6px 8px; border-bottom:1px solid #1e2634; white-space:nowrap; text-align:left; }
+th { position:sticky; top:0; background:#18202c; color:#93a1b5; font-weight:600; font-size:12px; }
+tbody tr:hover { background:#171f2b; }
+td.num { text-align:right; font-variant-numeric:tabular-nums; }
+.chart { width:100%; height:auto; display:block; }
+.chart .grid { stroke:#1e2634; stroke-width:1; }
+.chart .axis { fill:#8a94a6; font-size:13px; }
+.empty { color:#6b7688; padding:18px; text-align:center; border:1px dashed #26303f; border-radius:8px; }
+.empty-state { background:#121822; border:1px dashed #2a3342; border-radius:10px; padding:22px; }
+.empty-title { font-size:15px; margin-bottom:10px; color:#cfd6e3; }
+.empty-state ul { margin:0; padding-left:18px; color:#8a94a6; }
+.badge { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; border:1px solid #2a3342; }
+.badge.up { border-color:#f6465d55; background:#f6465d18; color:#ff8b9b; }
+.badge.down { border-color:#2ebd8555; background:#2ebd8518; color:#5fd6a8; }
+.badge.ok { border-color:#2ebd8555; background:#2ebd8518; color:#5fd6a8; }
+.badge.bad { border-color:#f6465d55; background:#f6465d18; color:#ff8b9b; }
+.badge.warn { border-color:#d2992255; background:#d2992218; color:#e8bf6a; }
+.badge.flat { color:#9fb0c8; }
+pre { background:#0d131b; border:1px solid #1e2634; border-radius:8px; padding:12px; overflow:auto;
+      max-height:460px; font:12px/1.5 Consolas,monospace; color:#b9c4d3; }
+.note { color:#8a94a6; font-size:13px; margin:0; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; }
+.chip { padding:3px 10px; border:1px solid #2a3342; border-radius:999px; color:#aab4c4; font-size:12px; }
+.chip:hover { border-color:#1f6feb; color:#cfe0ff; }
+footer { text-align:center; color:#5c6678; font-size:12px; padding:18px; }
+header{position:fixed;left:0;top:0;bottom:0;width:180px;border-right:1px solid #283246;border-bottom:0;padding:24px 12px;overflow:auto}header h1{font-size:16px;line-height:1.7;padding:0 10px 18px}header h1 span{display:block;margin:4px 0 0}header nav{display:flex;flex-direction:column;align-items:stretch;gap:8px}header nav a{padding:12px 18px;border-radius:8px}header nav form{margin-top:22px}header input{width:100%;font-size:12px}main{margin-left:180px;max-width:none;padding:24px 28px 60px}footer{margin-left:180px}.quick-read{border-top:3px solid #6ea8fe;background:linear-gradient(115deg,#182337,#121b28)}.quick-heading{display:flex;align-items:baseline;gap:14px;margin-bottom:12px}.quick-heading h2{font-size:24px;margin:0}.quick-heading span{color:#8295b1}.quick-read dl{grid-template-columns:100px 1fr;gap:13px}.quick-read dt{font-weight:700;color:#97b9ed}.quick-read dd{line-height:1.7}.quick-read .note{margin-top:16px;font-size:11px}.runtime td,.runtime th{white-space:normal}@media(max-width:700px){header{width:112px;padding:16px 6px}header h1{font-size:12px;padding:0 6px 10px}header nav a{padding:10px 12px}header input{font-size:10px;padding:4px 0}main{margin-left:112px;padding:14px 10px}footer{margin-left:112px}.quick-read dl{display:block}.quick-read dt{margin-top:10px}.quick-heading{display:block}.quick-heading span{font-size:11px}.runtime{padding:16px}} .runtime{overflow-wrap:anywhere}.runtime h2{overflow-wrap:anywhere}.table-scroll{overflow:auto}.runtime table{width:100%;border-collapse:collapse;font-size:13px}.runtime th,.runtime td{padding:10px;border-bottom:1px solid #2a3546;text-align:left;vertical-align:top}.flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}.decision{display:flex;flex-wrap:wrap;gap:20px;background:#1e3a5f;border-radius:10px;padding:18px;margin:12px 0}.decision b{font-size:24px}.runtime details{padding:12px 0}.runtime summary{cursor:pointer;color:#90c9af}@media(max-width:600px){.runtime dl{display:block}.runtime dt{margin-top:10px}.flow-grid{display:block}} .runtime{background:#151e2b;color:#dce5ef;border:1px solid #263447;padding:22px;border-radius:14px;margin:0 0 20px}.runtime h2{font-size:20px;margin:0 0 14px}.runtime button{border:0;border-radius:8px;padding:10px 18px;margin:4px 8px 4px 0;background:#245846;color:white;cursor:pointer}.runtime article{border-top:1px solid #e8eee9;padding:14px 0}.runtime dl{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:8px}.runtime dt{color:#69776e}.runtime dd{margin:0;overflow-wrap:anywhere}.runtime textarea{width:95%;min-height:75px;padding:12px}.blocked{color:#a13c2e;font-weight:600}
+/* Layout polish: bounded content, paired flow cards, local table scrolling. */
+main{max-width:1600px;width:calc(100% - 180px);margin:0 0 0 180px;padding:24px 28px 56px;min-width:0}
+.runtime{min-width:0;overflow-wrap:break-word;line-height:1.65}
+.runtime h2{line-height:1.4;font-size:20px;letter-spacing:.2px}
+.runtime h3{font-size:16px;line-height:1.5;margin:0 0 14px;color:#e1eaf7}
+.runtime article{border-color:#2a3546}.runtime dt{color:#9caec4}
+.runtime p.note{line-height:1.7;margin:8px 0 14px}.blocked{color:#f3aa8e}
+.runtime .table-scroll{max-width:100%;min-width:0;width:100%;overflow-x:auto;border-radius:8px}
+.runtime table{min-width:560px}.runtime th{font-weight:600;color:#9eb3ce;line-height:1.6}
+.flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:20px 0 28px;align-items:stretch}
+.runtime article.flow-card{min-width:0;margin:0;padding:18px;background:#111a27;border:1px solid #2b394d;border-radius:12px;display:flex;flex-direction:column}
+.flow-card h3{padding-bottom:12px;border-bottom:1px solid #2b394d;margin-bottom:12px}
+.flow-status{display:flex;flex-direction:column;gap:5px;width:100%;padding:14px 16px;border:1px solid #7e5838;border-radius:8px;background:#3d2e202e;color:#edc49d;margin:16px 0 0}
+.flow-status span{font-size:13px;line-height:1.7}
+.flow-card .flow-table{table-layout:fixed;width:100%;min-width:400px;font-variant-numeric:tabular-nums}
+.flow-name{width:34%}.flow-pct{width:17%}.flow-amount{width:24%}.flow-time{width:25%}
+.runtime .flow-table th,.runtime .flow-table td{padding:11px 8px;vertical-align:middle;line-height:1.6}
+.runtime .flow-table th{position:static;font-size:12px;background:#162132}
+.runtime .flow-table .numeric{text-align:right;white-space:nowrap}
+.runtime .flow-table .source-time{white-space:nowrap;font-size:12px;color:#aebdd0;text-align:right}
+.runtime .flow-table th:last-child{text-align:right}
+.flow-table td:first-child{overflow-wrap:anywhere}.flow-table time{display:inline-block;text-align:right}
+.flow-empty{min-height:290px;display:flex;flex:1;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#b6c3d6;font-size:14px}
+.flow-empty span{font-size:12px;color:#7f92ad}
+@media(min-width:1780px){main{margin-left:calc(180px + (100vw - 1780px)/2)}}
+@media(max-width:1180px){.flow-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){main{margin-left:112px;width:calc(100% - 112px);padding:14px 10px}.runtime{padding:16px}.flow-grid{gap:14px}.runtime article.flow-card{padding:14px}.flow-empty{min-height:160px}.quick-read dl{display:block}}
+
+@media(max-width:520px){header{width:64px;padding:16px 4px}header h1{font-size:0;padding:0 2px 12px}header h1:before{content:"游资心法";font-size:11px}header h1 span{font-size:9px}header nav a{padding:10px 4px;text-align:center;font-size:12px}header nav form{margin-top:16px}header input{font-size:8px;padding:4px 0}main{width:calc(100% - 64px);margin-left:64px;padding:12px 8px}footer{margin-left:64px}.runtime{padding:14px 12px;font-size:13px}.quick-heading h2{font-size:21px}.runtime h2{font-size:18px}.runtime article.flow-card{padding:12px}.quick-read dd{line-height:1.8}.quick-read .note{font-size:10px}}
+
+.runtime dl{grid-template-columns:minmax(100px,180px) minmax(0,1fr)}.runtime dd{min-width:0;overflow-wrap:anywhere}@media(max-width:700px){.runtime dl{display:block}.runtime dt{margin-top:12px}.runtime dd{margin:3px 0 10px;max-width:100%}.runtime ul{padding-left:18px;max-width:100%}}
+
+@media(max-width:520px){.runtime .flow-table{display:block;min-width:0;width:100%;table-layout:auto}.flow-table colgroup,.flow-table thead{display:none}.flow-table tbody{display:block;width:100%}.flow-table tr{display:block;padding:10px 0;border-bottom:1px solid #28364b}.runtime .flow-table td{display:block;width:100%;padding:3px 0;border:0;font-size:12px;overflow-wrap:anywhere}.flow-table td:first-child{font-size:13px;font-weight:600;padding-bottom:7px}.runtime .flow-table td.numeric{text-align:right;white-space:normal}.flow-table td:nth-child(2):before{content:"涨跌幅（%）";float:left;color:#8298b5;font-size:11px}.flow-table td:nth-child(3):before{content:"主力净额（亿）";float:left;color:#8298b5;font-size:11px}.runtime .flow-table td.source-time{display:flex;justify-content:space-between;align-items:center;font-size:11px}.flow-table td.source-time:before{content:"数据时点";color:#8298b5}.runtime .flow-card .table-scroll{overflow-x:visible}}
+.market-conclusion{background:#1b2c40;border-left:3px solid #7cacf2;border-radius:8px;padding:14px 16px;margin-bottom:20px}.market-conclusion b{color:#9ec4ff}.market-conclusion p{margin:8px 0 0;line-height:1.8}.yellow-white-panel h3{margin-top:22px}.yellow-white-panel li{margin-bottom:10px;line-height:1.8}
+/* User-requested emphasis for section headings, table headers and summary labels. */
+.runtime h2,.runtime h3,.runtime table th,.runtime dt,.runtime .quick-read dt,.quick-read dt{color:#ff6868;font-weight:700}
+.runtime table th *{color:inherit;font-weight:inherit}
+.sentiment-deep-red{color:#b91c1c;font-weight:700}.decision b,.decision span{font-size:24px;color:#ff6269;font-weight:700;line-height:1.3}.formal-temperature-pending{color:#facc15}.quick-read dl>dt:nth-of-type(1)+dd{color:#b91c1c}.quick-read dl>dt:nth-of-type(2)+dd,.quick-read dl>dt:nth-of-type(3)+dd,.quick-read dl>dt:nth-of-type(4)+dd{color:#60a5fa}.quick-read dl>dt:nth-of-type(5)+dd,.quick-read dl>dt:nth-of-type(6)+dd{color:#facc15}#lhb-structure .table-scroll{max-width:100%;overflow-x:auto}#lhb-structure table{min-width:1250px;table-layout:auto}#lhb-structure th{white-space:nowrap}#lhb-structure td{min-width:80px;max-width:260px;overflow-wrap:break-word;word-break:normal}#lhb-structure td:nth-child(1),#lhb-structure td:nth-child(2){white-space:nowrap}
+
+html,body{margin:0;padding:0}
+body{display:flex!important;min-height:100vh;background:#0b111a}
+.sidebar{width:170px;flex:0 0 170px;background:#0d1520;border-right:1px solid #1e2b3c;
+  padding:18px 12px;box-sizing:border-box;position:sticky;top:0;height:100vh;overflow:auto}
+.sidebar .brand{font-size:14px;color:#c9d6e6;line-height:1.5;margin-bottom:4px;font-weight:600}
+.sidebar .sub{font-size:11px;color:#5b6b80;margin-bottom:16px}
+.sidebar button{display:block;width:100%;text-align:left;padding:10px 12px;margin-bottom:6px;
+  background:transparent;border:1px solid transparent;border-radius:8px;color:#8fa3bb;
+  font-size:14px;cursor:pointer;font-family:inherit;transition:.15s}
+.sidebar button:hover{background:#131e2c;color:#c9d6e6}
+.sidebar button.on{background:#16283d;border-color:#2b4straight;color:#9ec4ff}
+.sidebar button.on{border-color:#2b4a6b}
+.content{flex:1;min-width:0;padding:22px 30px;overflow:auto}
+.panel{display:none}
+.panel.on{display:block}
+.panel main{padding:0;margin:0}
+.foot{margin-top:26px;color:#4d5c70;font-size:12px}
+</style><style>.content>.panel,.panel{display:block}.sidebar a{display:block;width:100%;text-align:left;padding:10px 12px;margin-bottom:6px;border:1px solid transparent;border-radius:8px;color:#8fa3bb;font-size:14px;text-decoration:none}.sidebar a:hover{background:#131e2c;color:#c9d6e6}.sidebar a.on{background:#16283d;border-color:#2b4a6b;color:#9ec4ff}</style></head><body><aside class="sidebar"><div class="brand">游资心法研究<br>融合工作台</div><div class="sub">2026-10-30 固定快照</div><a href="index.html">复盘</a><a href="sentiment.html">情绪周期</a><a href="premarket.html">盘前</a><a href="auction.html">竞价</a><a href="intraday.html" class="on">盘中</a><a href="market.html">大盘</a><a href="results.html">战绩</a><a href="optimization.html">优化</a></aside><div class="content"><div class="panel" data-name="盘中"><main><section class="runtime quick-read"><div class="quick-heading"><h2>30秒速读</h2><span>当前快照 · 2026-10-30</span></div><dl><dt>基调</dt><dd>量能同比待核验＋上涨占比16.4%＋催化待核验＋情绪恶化，但炸板与梯队数据仍需核验；暂按结构性行情研究[不可验证]</dd><dt>主攻</dt><dd>正式主攻：待心法条件核验；待核验：缺少同口径完整行业涨幅榜；不以涨幅或资金榜直接认定心法主攻</dd><dt>规避</dt><dd>高位连板、昨日强势今日转弱的补跌股；具体名单缺证据则不列</dd><dt>仓位</dt><dd>空仓｜弱势信号占优，优先防范补跌</dd><dt>关键变量</dt><dd>下一交易日看成交额能否放大、上涨占比能否回到50%以上、炸板率能否降至30%以下</dd><dt>近7日命中率</dt><dd>旧行业TOP3账本：心法主攻命中率：积累中，暂无已判定样本；TOP3观察命中率：积累中，暂无已判定样本；新概念候选尚未建立事前命中样本</dd></dl><p class="note">统一行业板块；次日收盘涨幅&gt;0且跑赢上证指数为命中。仅P5行业与P2指数的研究观察统计，不冒充P1+P2正式交易战绩；分母随真实样本变化。；仓位为通用研究情景标签。</p></section><section class="runtime" id="action-brief"><h2>行动结论</h2><dl><dt>结论</dt><dd>等</dd><dt>主看</dt><dd>待核验</dd><dt>标的</dt><dd>暂无符合条件的标的</dd><dt>出手条件</dt><dd>等待同题材核心与助攻确认、个股触发条件通过；当前不出手</dd><dt>放弃条件</dt><dd>核心转弱、板块助攻消失或行情过期，取消计划</dd><dt>数据时间</dt><dd>2026-10-30 11:30</dd></dl><p class="note">历史快照；该时点数据未就绪或已过期。</p></section><div id="progressive-details"><section class="runtime"><h2>评分明细与详细分析</h2><p>此固定快照未包含该项详情。</p></section></div><p class="score-legend">个股总分：<span style="color:#40d995">低于50 不合格</span> · <span style="color:#ff5353">50–69.9 合格</span> · <span style="color:#ff5353">70–79.9</span><span style="color:#ffd740"> 接近高分观察</span> · <span style="color:#ffd740">80–100 高分观察</span>。试行门槛；黄色仅进入优先观察，入场仍须实时数据、心法与风险核验通过。灰色为缺失。</p></main></div><div class="foot">行情数据日 2026-10-30 · 固定只读快照 · 不连接实时后台</div></div></body></html>
